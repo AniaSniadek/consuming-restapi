@@ -5,9 +5,9 @@ const User = props => {
 
     return (
         <li>
-            Nazwa użytkownika: <strong>{name}</strong><br />
-            Email użytkownika: <strong>{email}</strong><br />
-            Hasło użytkownika: <strong>{password}</strong><br />
+            Username: <strong>{name}</strong><br />
+            Email: <strong>{email}</strong><br />
+            Password: <strong>{password}</strong><br />
         </li>
     );
 }
