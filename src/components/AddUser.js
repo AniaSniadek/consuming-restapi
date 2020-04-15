@@ -51,7 +51,7 @@ class AddForm extends Component {
     render() {
         return (
             <div className="form">
-                <label>Dodaj użytkownika:</label>
+                <label>Add user:</label>
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group controlId="name">
                         <Form.Control type="text" placeholder="Enter name" name="name" value={this.state.name} onChange={this.handleChange} />
@@ -63,7 +63,7 @@ class AddForm extends Component {
                     <Form.Group controlId="password">
                         <Form.Control type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange} />
                     </Form.Group>
-                    <button>Dodaj użytkownika</button>
+                    <button>Add user</button>
                 </Form>
             </div>
         );
