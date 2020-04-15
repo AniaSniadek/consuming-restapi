@@ -22,6 +22,7 @@ class ShowUsers extends Component {
         const users = this.state.usersList.map(user => (
             <User key={user.id} name={user.name} email={user.email} password={user.password} />
         ))
+        
         return (
             <div>
                 <button onClick={this.handleFetchDataRead}>Show users</button>
