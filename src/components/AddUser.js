@@ -18,6 +18,16 @@ class AddForm extends Component {
                 "email": this.state.email,
                 "password": this.state.password
             })
+        }).then(response => {
+            if (response.ok) {
+                this.setState({
+                    name: '',
+                    email: '',
+                    password: ''
+                })
+                alert('New user has been added to the database!')
+            } else
+                alert("Error!")
         })
     }
 
@@ -36,12 +46,6 @@ class AddForm extends Component {
     handleSubmit = e => {
         e.preventDefault();
         this.fetchDataAdd();
-        this.setState({
-            name: '',
-            email: '',
-            password: ''
-        })
-        alert('Dodano nowego użytkownika do bazy!')
     }
 
     render() {
