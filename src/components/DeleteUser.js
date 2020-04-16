@@ -39,12 +39,12 @@ class DeleteUser extends Component {
     render() {
         return (
             <div className='form'>
-                <label>Usuń użytkownika:</label>
+                <label>Delete user:</label>
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group controlId="id">
                         <Form.Control type="number" placeholder="Enter id" name="id" value={this.state.id} onChange={this.handleChange} />
                     </Form.Group>
-                    <button>Usuń użytkownika</button>
+                    <button>Delete user</button>
                 </Form>
             </div>
         );

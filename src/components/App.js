@@ -1,7 +1,7 @@
 import React from 'react';
 import AddUser from './AddUser';
 import ShowUsers from './ShowUsers';
-//import DeleteUser from './DeleteUser';
+import DeleteUser from './DeleteUser';
 
 class App extends React.Component {
     render() {
@@ -9,7 +9,7 @@ class App extends React.Component {
             <div className="app">
                 <ShowUsers/>
                 <AddUser/>
-                {/* <DeleteUser/> */}
+                <DeleteUser/>
             </div>
         );
     }
