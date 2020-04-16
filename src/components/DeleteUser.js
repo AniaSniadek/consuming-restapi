@@ -14,6 +14,14 @@ class DeleteUser extends Component {
             body: JSON.stringify({
                 "id": this.state.id
             })
+        }).then(response => {
+            if (response.ok) {
+                this.setState({
+                    id: ''
+                })
+                alert('User has been deleted!')
+            } else
+                alert("Error!")
         })
     }
 
@@ -26,10 +34,6 @@ class DeleteUser extends Component {
     handleSubmit = e => {
         e.preventDefault();
         this.fetchDataDelete();
-        this.setState({
-            id: ''
-        })
-        alert('Usunięto użytkownika z bazy!')
     }
 
     render() {
