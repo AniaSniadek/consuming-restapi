@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
 
-const addUser = 'http://localhost/calendar/users/create.php';
+const addUser = 'http://localhost/calendar/users/create.php' ////your endpoint
 
 class AddForm extends Component {
     state = {

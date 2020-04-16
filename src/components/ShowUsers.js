@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import User from './User';
 
-const readUsers = 'http://127.0.0.1/calendar/users/read.php';
+const readUsers = 'http://127.0.0.1/calendar/users/read.php'; //your endpoint
 
 class ShowUsers extends Component {
     state = {

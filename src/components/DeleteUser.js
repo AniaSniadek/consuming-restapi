@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
 
-const deleteUser = 'http://localhost/calendar/users/delete.php';
+const deleteUser = 'http://localhost/calendar/users/delete.php' //your endpoint
 
 class DeleteUser extends Component {
     state = {
