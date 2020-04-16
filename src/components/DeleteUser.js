@@ -1,0 +1,50 @@
+import React, { Component } from 'react';
+import { Form } from 'react-bootstrap';
+
+const deleteUser = 'http://localhost/calendar/users/delete.php';
+
+class DeleteUser extends Component {
+    state = {
+        id: ''
+    }
+
+    fetchDataDelete = () => {
+        fetch(deleteUser, {
+            method: 'POST',
+            body: JSON.stringify({
+                "id": this.state.id
+            })
+        })
+    }
+
+    handleChange = e => {
+        this.setState({
+            id: e.target.value
+        })
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+        this.fetchDataDelete();
+        this.setState({
+            id: ''
+        })
+        alert('Usunięto użytkownika z bazy!')
+    }
+
+    render() {
+        return (
+            <div className='form'>
+                <label>Usuń użytkownika:</label>
+                <Form onSubmit={this.handleSubmit}>
+                    <Form.Group controlId="id">
+                        <Form.Control type="number" placeholder="Enter id" name="id" value={this.state.id} onChange={this.handleChange} />
+                    </Form.Group>
+                    <button>Usuń użytkownika</button>
+                </Form>
+            </div>
+        );
+    }
+}
+
+export default DeleteUser;
